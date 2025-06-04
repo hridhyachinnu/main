@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Feedback App</title>
+    <link rel="stylesheet" href="{% static 'feedback/style.css' %}">
+    <style>
+      body {
+        text-align: center;
+        margin-top: 100px;
+        font-family: 'Segoe UI', sans-serif;
+      }
+      a.button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 30px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+      a.button:hover {
+        background-color: #217dbb;
+      }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Intern Feedback Portal</h1>
+    <p>Please login or proceed to submit feedback.</p>
+    <a href="{% url 'feedback_form' %}" class="button">Give Feedback</a>
+</body>
+</html>
